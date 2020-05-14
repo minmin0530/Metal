@@ -38,7 +38,7 @@ vertex InOut2 vertexShader(constant InOut *vertices [[buffer(0)]],
     out.color = vertices[vid].color;
     out.normal = ( uniforms.projectionMatrix * uniforms.modelViewMatrix * float4(vertices[vid].normal.xyz, 1.0) ).xyz;
     out.light = uniforms.lightPosition;
-    return out;//vertices[vid];
+    return out;
 }
 
 
@@ -48,8 +48,5 @@ fragment float4 fragmentShader(InOut2 vert [[stage_in]]) {
     float specular = pow(max(dot(vert.normal, halfway), 0.0), 5);
     float directional = max(dot(normalize(vert.light) , vert.normal), 0.0);
     float3 vLighting = vert.color.rgb + (lightColor * (directional + specular));
-//    if (vert.color.a == 0.0) {
-//        discard_fragment();
-//    }
     return float4(vLighting, vert.color.a);
 }

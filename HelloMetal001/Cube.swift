@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Vertex2 {
+struct Vertex {
     var position: vector_float4
     var color: vector_float4
     var normal: vector_float3
@@ -18,48 +18,48 @@ let white_face : vector_float4 = [0.5, 0.5, 0.5, 0.3]
 class Cube {
     
     var vertexData = [
-        Vertex2(position: [ 1.0,  1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [-1.0,  1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [ 1.0, -1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [ 1.0, -1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [-1.0,  1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [-1.0, -1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [ 1.0,  1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [-1.0,  1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [ 1.0, -1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [ 1.0, -1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [-1.0,  1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [-1.0, -1.0, 1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
         
         
-        Vertex2(position: [-1.0, 1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [ 1.0, 1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [ 1.0, 1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [-1.0, 1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [ 1.0, 1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [-1.0, 1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [-1.0, 1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [ 1.0, 1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [ 1.0, 1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [-1.0, 1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [ 1.0, 1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [-1.0, 1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
         
-        Vertex2(position: [1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [1.0,  1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [1.0, -1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [1.0,  1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [1.0, -1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
         
-        Vertex2(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [ 1.0,  1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
-        Vertex2(position: [-1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [ 1.0,  1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
+        Vertex(position: [-1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 0.0, 1.0]),
         
-        Vertex2(position: [ 1.0, -1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
-        Vertex2(position: [-1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [ 1.0, -1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [ 1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
+        Vertex(position: [-1.0, -1.0, -1.0, 1.0], color: white_face, normal: [0.0, 1.0, 0.0]),
         
-        Vertex2(position: [-1.0,  1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
-        Vertex2(position: [-1.0, -1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [-1.0,  1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [-1.0, -1.0,  1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [-1.0,  1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
+        Vertex(position: [-1.0, -1.0, -1.0, 1.0], color: white_face, normal: [1.0, 0.0, 0.0]),
     ]
     
     init(r:Float,g:Float,b:Float,a:Float,sx:Float,sy:Float,sz:Float) {
